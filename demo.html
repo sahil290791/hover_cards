@@ -24,6 +24,10 @@
     .navbar-brand, .navbar-brand:hover{
       color:#26C6DA;
     }
+    .paddingReset{
+      padding-right: 0;
+      padding-left: 0;
+    }
     .link,.link:visited {
         background-color: #004a4e;
         border-radius: 3px;
@@ -41,10 +45,9 @@
     .jumbotron{
       background: #E0F7FA;
     }
-    .cards{
 
-    }
     </style>
+    <link rel="stylesheet" type="text/css" href="dist/css/hoverCard.min.css">
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -56,21 +59,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="#" class="navbar-brand">Dummy App</a>
+          <a href="#" class="navbar-brand">DevBlogs</a>
         </div>
         <div class="navbar-collapse collapse navbar-right" id="navbar" aria-expanded="false" style="height: 1px;">
           <a class="link navbar-btn" href="#">About</a>
-          <a class="link navbar-btn" href="#">Gallery</a>
+          <a class="link navbar-btn" href="#">Blogs</a>
           <a class="link navbar-btn" href="#">Credits</a>
         </div>
       </div>
     </div>
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello Techies!</h1>
-        <p>This is a dummy app created for own purpose</p>
+        <h2>Hello Devs!!</h2>
+        <p>This is one place where you find amazing blogs written by amazing people.<br/>
+        Bookmark your favourite blogs to read them later.</p>
       </div>
     </div>
+
     <div class="container-fluid">
       <div class="container">
         <div class="row">
@@ -78,35 +83,112 @@
             <div class="h4">Sony Xperia SP
               <p><small>The design connoisseur's smartphone</small></p>
             </div>
-            <p><img src="http://api.sonymobile.com/files/Xperia-SP-red-1240x840-22d7d4c41d4056df3e33b8b7407d768f.jpg" class="img-rounded img-responsive"/></p>
+            <p><img src="images/xperia_sp.jpg" class="img-rounded img-responsive"/></p>
             <p class="text-muted desc">
               Sony's Xperia SP is now a year old, but is it still worth picking up a new handset for the full asking price? We revisit this great handset to see if it's been overtaken by its newer rivals.
             </p>
-            <div class="footer">By- <a class="" href="#">Sahil Prajapati</a></div>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_1.json" href="#">Raymond Pierce</a></div>
           </div>
           <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
             <div class="h4">Sony Xperia Z3
               <p><small>It's like the Z2, but a lot better</small></p>
             </div>
-            <p><img src="http://api.sonymobile.com/files/xperia-z3-compact-green-1240x840-a78b2c78e599f712ba7633e9db9ae326.jpg" class="img-responsive img-rounded"></p>
+            <p><img src="images/xperia_z3.jpg" class="img-responsive img-rounded"></p>
             <p class="text-muted desc">
               Sony's only gone and done it again. Made a phone, let the paint dry, sell it to the masses, then make another one. The Z followed instantly by the Z1, which was shadowed by the Z2 a few months later at MWC... and now, in what feels like three sleeps later, the Z3 is here.
             </p>
-            <div class="footer">By- <a class="" href="#">Sahil Prajapati</a></div>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_2.json" href="#">Joyce Ross</a></div>
           </div>
           <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
             <div class="h4">iPhone 6S
               <p><small>The only thing that’s changed is everything</small></p>
             </div>
-            <p><img src="http://cdn.gsmarena.com/imgroot/reviews/15/apple-iphone-6s/lifestyle/-728w2/gsmarena_005.jpg" class="img-responsive img-rounded"></p>
+            <p><img src="images/iphone.jpg" class="img-responsive img-rounded"></p>
             <p class="text-muted desc">
              This time around it's a little different: the iPhone 6S is both a great upgrade from those 'stuck' on a 5S, and a decent phone in its own right. If you're ready for an upgrade from the old design and are desperate to stick with Apple then this is a great handset to go for.
             </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_3.json" href="#">Ian Austin</a></div>
           </div>
+
+          <div class="col-lg-9 col-md-12 cards col-sm-12 col-xs-12">
+            <div class="h4">Apple Watch getting full update
+              <p><small>new bands in March</small></p>
+            </div>
+            <p><img src="images/app.jpg" class="img-responsive img-rounded"></p>
+            <p class="text-muted desc">
+              Although popular among celebrities, the Apple Watch still hasn't turned out to be a runaway hit with regular consumers like the iPhone. Nevertheless, there's been a great deal of interest around when the next version will be released, and now we have a clue.
+
+              A new report claims that the current version of the Apple Watch will be refreshed with new bands in March and get an entirely new case design in the fall. 
+            </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_3.json" href="#">Ian Austin</a></div>
+          </div>
+
+          
+
+
+          <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
+            <div class="h4">iPhone 6S
+              <p><small>The only thing that’s changed is everything</small></p>
+            </div>
+            <p><img src="images/iphone.jpg" class="img-responsive img-rounded"></p>
+            <p class="text-muted desc">
+             This time around it's a little different: the iPhone 6S is both a great upgrade from those 'stuck' on a 5S, and a decent phone in its own right. If you're ready for an upgrade from the old design and are desperate to stick with Apple then this is a great handset to go for.
+            </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_4.json" href="#">Mitchell Williams</a></div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
+            <div class="h4">iPhone 6S
+              <p><small>The only thing that’s changed is everything</small></p>
+            </div>
+            <p><img src="images/iphone.jpg" class="img-responsive img-rounded"></p>
+            <p class="text-muted desc">
+             This time around it's a little different: the iPhone 6S is both a great upgrade from those 'stuck' on a 5S, and a decent phone in its own right. If you're ready for an upgrade from the old design and are desperate to stick with Apple then this is a great handset to go for.
+            </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_5.json" href="#">Mae Reid</a></div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
+            <div class="h4">Sony Xperia Z3
+              <p><small>It's like the Z2, but a lot better</small></p>
+            </div>
+            <p><img src="images/xperia_z3.jpg" class="img-responsive img-rounded"></p>
+            <p class="text-muted desc">
+             Your best moments deserve more than dark, blurry shots. Years of Sony camera expertise mean that the Xperia Z3 is packed full of our famous Cyber-shot and Handycam technologies. So every image you capture will be crisp, bright and sharp – exactly as you remember it.
+            </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_3.json" href="#">Ian Austin</a></div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
+            <div class="h4">Sony Xperia SP
+              <p><small>The design connoisseur's smartphone</small></p>
+            </div>
+            <p><img src="images/xperia_sp.jpg" class="img-responsive img-rounded"></p>
+            <p class="text-muted desc">
+             The Xperia SP HD phone has a Reality Display powered by Mobile BRAVIA® Engine 2. For your viewing pleasure: razor sharp images, vibrant colours and the enhanced contrast you recognize from Sony TV´s.
+            </p>
+            <div class="footer">By- <a class="hoverOn" data-dev-id="dev_3.json" href="#">Ian Austin</a></div>
+          </div>
+
+
         </div>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+    <script src="dist/js/hoverCard.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.hoverOn').hoverCards({
+          url: 'https://dl.dropboxusercontent.com/u/106590964/',
+          backgroundColor: '#E0F7FA'
+        });
+
+      });
+    </script>
+
+
   </body>
 </html>
