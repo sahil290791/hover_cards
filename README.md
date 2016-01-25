@@ -43,4 +43,4 @@ If you want to change the format and card layout feel free to hack it.
 ![alt hoverCard](images/demo.png "Logo Title HoverCard 1")
 
 ##Demo:
-Click [here](/demo.html) to see the demo.
+Click [here](http://sahil290791.github.io/hover_cards/) to see the demo.
