@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-# demo-app
-=======
-# hover_cards
->>>>>>> 8067c6be3b0d69e4692b572cc21149ade45ec49e
+# Hover Cards
+## A plugin that enables hovercards
+
+## How to use:
+1.Add **hoverCard.min.css** to your page.
+```html
+<link rel="stylesheet" type="text/css" href="/path/to/hoverCard.min.css">
+```
