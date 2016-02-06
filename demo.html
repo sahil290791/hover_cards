@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="demo.appcache">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-control" content="public">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Demo</title>
 
@@ -47,7 +48,7 @@
     }
 
     </style>
-    <link rel="stylesheet" type="text/css" href="dist/css/hoverCard.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/hoverCard.min.css" async>
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -123,9 +124,6 @@
             <div class="footer">By- <a class="hoverOn" data-dev-id="dev_3.json" href="#">Ian Austin</a></div>
           </div>
 
-          
-
-
           <div class="col-lg-4 col-md-4 cards col-sm-6 col-xs-12">
             <div class="h4">iPhone 6S
               <p><small>The only thing that’s changed is everything</small></p>
@@ -178,7 +176,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
     <script src="dist/js/hoverCard.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" defer>
       $(document).ready(function(){
 
         $('.hoverOn').hoverCards({

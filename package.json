@@ -1,0 +1,46 @@
+{
+  "name": "hover-cards",
+  "version": "0.1.1",
+  "description": "A plugin that enables hovercards",
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "hoverCards",
+    "hover-cards",
+    "hover cards",
+    "hover",
+    "cards"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahil290791/hover_cards"
+  },
+  "bugs": {
+    "url": "https://github.com/sahil290791/hover_cards/issues"
+  },
+  "author": {
+    "name": "Sahil Prajapati",
+    "email": "sahilprjpt206@gmail.com",
+    "url": "https://github.com/sahil290791"
+  },
+  "homepage": "http://sahil290791.github.io/hover_cards/",
+  "contributors": [
+    {
+      "name": "Sahil Prajapati",
+      "email": "sahilprjpt206@gmail.com",
+      "url": "https://github.com/sahil290791"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
+}
