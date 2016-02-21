@@ -1,5 +1,5 @@
 /*
- *  Hover Card - v0.1.1
+ *  Hover Card - v0.2.1
  *  Made by Sahil Prajapati
  */
 (function( $ ) {
@@ -8,26 +8,36 @@
  
         var settings = $.extend({}, $.fn.hoverCards.defaults, options );
         var card;
+        var showCard = false;
         var hCard = $('<div/>');
         var request;
+        this.addClass('hover-activated');
 
-    	this.hover(function(){
+    	$('.hover-activated').stop(true, true).hover(function(){
     		card = $(this);
-	      	var dev_id = card.attr('data-dev-id');
-	    	if(card.find('.hoverParent').length == 0){
-	    		if (request != undefined){
-	    			request.abort();
-	    		}
-		 		getData(settings.url, dev_id);
+    		timeout = setTimeout(function(){
+            showCard = true;
+            if(showCard === true){
+		      	var dev_id = card.attr('data-dev-id');
+		    	if(card.find('.hoverParent').length == 0){
+		    		if (request != undefined){
+		    			request.abort();
+		    		}
+			 		getData(settings.url, dev_id);
+			 	}
+			 	else{
+			 		hCard = card.find('.hoverParent');
+			 		var page_height = $(window).scrollTop();
+		    		var elem_height = card.offset().top;
+			 		positionCard(page_height, elem_height);	
+		 		}
 		 	}
-		 	else{
-		 		hCard = card.find('.hoverParent');
-		 		var page_height = $(window).scrollTop();
-	    		var elem_height = card.offset().top;
-		 		positionCard(page_height, elem_height);	
-	 		}
+		 },settings.delay);
 	 	},
 	    function(){
+	    	//else don't show and clearout timer
+            clearTimeout(timeout);
+            showCard = false;
 	    	card.find('.hoverParent').fadeOut(settings.fadeOut).find('.hoverCard').hide();
 	    });
 
@@ -39,7 +49,7 @@
 		        method: 'get',
 		        dataType: 'json',
 		        beforeSend: function(data){
-		        	hCard.addClass('hoverParent').css('left','-7px').fadeIn(settings.fadeIn).append('<div class="hoverCard in-block">Loading..</div>');
+		        	hCard.addClass('hoverParent').css('left','-7px').fadeIn(settings.fadeIn);//.append('<div class="hoverCard in-block">Loading..</div>');
 		        	card.css('position','relative').append(hCard);
 		        },
 		        success: function(data){
@@ -57,7 +67,16 @@
 	    function createCard(user){
 	        var data = '<div class="hoverCard"><div class="arrow-up"></div><div class="userPic" style="background-color:'+settings.backgroundColor+'"><div class="picContainer"><img src="'+user.pic+'"></div>';
 	        data += '<div class="userDetail"><span class="name"><strong>'+user.name+'</strong></span>';
-	        data += '<p class="small role text-muted">'+user.role+'</p><p class="about small">'+user.about+'</p></div></div>';
+	        data += '<p class="small role text-muted">'+user.role+'</p>';
+	        if (user.hasOwnProperty("about")){
+	        	if(user.about.length > 140 ){
+	        		data += '<p class="about small">'+user.about.substring(0,140)+'..</p></div></div>';
+	        	}
+	        	else{
+	        		data += '<p class="about small">'+user.about.substring(0,140)+'</p></div></div>';
+	        	}
+
+	    	}
         	data += '<div class="userStats"><div><strong>'+user.solved+'</strong><p>Problems Solved</p></div>';
         	data += '<div><strong>'+user.followers+'</strong><p>Followers</p></div>';
         	data += '<div><strong>'+user.following+'</strong><p>Following</p></div></div><div class="arrow-down"></div></div>';
@@ -109,7 +128,8 @@
 		"url":null,
 		"fadeIn": 800,
 		"fadeOut":400,
-		"backgroundColor":'#ddd'
+		"backgroundColor":'#ddd',
+		"delay": 1300
 	};
 
 }( jQuery ));
