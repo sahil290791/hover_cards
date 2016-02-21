@@ -22,7 +22,8 @@ $('.hoverOn').hoverCards({
   url: 'https://getUserData/', //passing general url to which id stored in 'data-dev-id' can be appended
   backgroundColor: '#ddd', // to change the color of the card,
   fadeIn: 400, // fade in time in milliseconds
-  fadeOut: 200 // fade out time in milliseconds
+  fadeOut: 200, // fade out time in milliseconds
+  delay: 1300 // triggers the hoverCard if user hovers for more than specified delay (in ms)
 });
 ```
 5.The data returned from the url should be in json and in the following format only.
