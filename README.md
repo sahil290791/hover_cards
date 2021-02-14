@@ -1,5 +1,10 @@
 # Hover Cards
 ## A plugin that enables hovercards
+## Demo
+[Click here to check the demo](http://sahil290791.github.io/hover_cards/demo.html)
+
+##Preview
+![alt hoverCard](images/demo.png "Logo Title HoverCard 1")
 
 ## How to use:
 1.Add **hoverCard.min.css** to your page.
@@ -40,8 +45,3 @@ $('.hoverOn').hoverCards({
 ```
 ###Note:
 If you want to change the format and card layout feel free to hack it.
-##Preview
-![alt hoverCard](images/demo.png "Logo Title HoverCard 1")
-
-##Demo:
-Click [here](http://sahil290791.github.io/hover_cards/demo.html) to see the demo.
